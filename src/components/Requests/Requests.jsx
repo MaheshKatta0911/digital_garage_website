@@ -8,12 +8,13 @@ const Requests = () => {
     const [database, setData] = useState(null);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [buttonStatus, SetButtonStatus] = useState("Accept");
     const BACKEND_URL = import.meta.env.VITE_BACKEND_URL
     useEffect(() => {
 
         const fetchData = async () => {
           try {
-            const response = await fetch(`${BACKEND_URL}/getServices`);
+            const response = await fetch(`${BACKEND_URL}/getServicesRequests`);
             
             if (!response.ok) {
               throw new Error('Network response was not ok');
@@ -50,6 +51,7 @@ const Requests = () => {
     
           const data = await response.json();
           // Handle the response data
+          SetButtonStatus("Accepted");
           console.log(data);
         } catch (error) {
           // Handle errors
@@ -75,7 +77,7 @@ const Requests = () => {
                             </span>
                             <span className="primaryText">{card.serviceName}</span>
                             <span className="secondaryText">{card.description}</span>
-                            <button className='requestBtn' onClick={()=>handleSubmit(card.serviceId,"accept")} type="submit">Accept</button>
+                            <button className='requestBtn' onClick={()=>handleSubmit(card.serviceId,"accept")} type="submit">{buttonStatus}</button>
                         </div>      
                 </SwiperSlide>
             ))
