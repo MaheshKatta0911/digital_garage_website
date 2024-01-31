@@ -13,9 +13,9 @@ const Contact = () => {
           <span className="secondaryText">
             We will be enhancing the services for you in an unpredictable way.
           </span>
-          <div className="flexColStart contactModes">
+          <div className="flexColStart contactModes" >
             <div className="flexStart row">
-              <div className="flexColCenter mode">
+              <div className="flexColCenter mode" style={{margin:'2rem'}}>
                 <div className="flexStart">
                   <div className="flexCenter icon">
                     <MdCall size={25} />

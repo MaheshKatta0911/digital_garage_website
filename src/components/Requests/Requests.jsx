@@ -29,7 +29,7 @@ const Requests = () => {
         };
     
         fetchData();
-      });
+      }, []);
 
     const handleSubmit = async (serviceId, status) => {
         event.preventDefault(); // Prevent the default form submission

@@ -15,9 +15,6 @@ const Header = () => {
             <button className="button">
                 <a href="">contact</a>
             </button>
-
-
-
         </div>
         </div>
     </section>
