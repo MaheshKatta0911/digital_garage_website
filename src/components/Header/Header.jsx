@@ -6,11 +6,11 @@ const Header = () => {
     <section className="h-wrapper">
     
     <div className="flexCenter paddings innerWidth h-container">
-        <img src="https://cdn.carbuzz.com/gallery-images/1600/1101000/900/1101932.jpg" alt="car" width={100}/>
+        <img src="logo.png" alt="car" width={100}/>
         <div className="flexCenter h-menu">
-            <a href="">Requests</a>
+            <a href="#requests">Requests</a>
             <a href="">Our Value</a>
-            <a href="">Contact us</a>
+            <a href="#contactus">Contact us</a>
             <a href="">Get Started</a>
             <button className="button">
                 <a href="">contact</a>
